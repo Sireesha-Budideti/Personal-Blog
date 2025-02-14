@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Background gradient */
+      font-family: Arial, sans-serif;
+    }
+    .welcome-container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      font-style: italic;
+      font-weight: bold;
+      color: #fff;
+    }
+    .typewriter span {
+      display: inline-block;
+      border-right: 2px solid #fff;
+      animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      cursor: pointer;
+      display: none;
+    }
+    button:hover {
+      background-color: #ff7e5f;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Hello Guys!!</h1>
+    <div class="typewriter">
+      <span>Welcome to my Portfolio Website!</span>
+    </div>
+    <button id="submit-btn" onclick="goToPortfolio()">Go to Portfolio</button>
+  </div>
+
+  <script>
+    const button = document.getElementById("submit-btn");
+    setTimeout(() => {
+      button.style.display = "inline-block";
+    }, 3000); // Show button after 3 seconds
+
+    function goToPortfolio() {
+      window.location.href = "portfolio.html"; // Redirect to portfolio page
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* About Section */
+#about {
+  background-color: #0d1117;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Container: Flex for Horizontal Layout */
+.section-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* About Card Styling */
+.about-card {
+  background-color: #1a1f26;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: all 0.8s ease;
+  text-align: center;
+}
+
+/* Heading Styling */
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00e5ff; /* Updated color */
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+}
+
+/* Card Heading Color */
+.about-card h3 {
+  color: #00bcd4; /* Consistent with the main heading */
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+/* Paragraph Text Styling */
+.about-card p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Hover Effect */
+.about-card:hover {
+  transform: rotateY(0deg);
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.5), 0 0 15px rgba(0, 229, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Animation */
+.about-card.visible {
+  opacity: 1;
+  transform: rotateY(0deg);
+  animation: rotateIn 0.8s ease;
+}
+
+/* Rotate-In Effect */
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+#about .heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00e5ff;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+}

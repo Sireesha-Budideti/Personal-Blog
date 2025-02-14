@@ -1,0 +1,187 @@
+/* Home CSS - Updated Background Color */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light text for dark theme */
+  background-color: #121212; /* Keep original body background */
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #1e1e1e; /* Dark header */
+  color: #fff;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Center Align Header Text */
+header .logo,
+header nav {
+  flex: 1;
+  text-align: center;
+}
+
+header .logo {
+  text-align: left;
+}
+
+header nav {
+  justify-content: center;
+}
+
+/* Home Section with Updated Background */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 20px;
+  background-color: #0d1117; /* Updated background color for Home section */
+}
+
+.home .text {
+  max-width: 50%;
+}
+
+.home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #D3D3D3;
+}
+
+.home h2 span.highlight {
+  color: #00f5ff;
+  text-shadow: 0 0 5px rgba(0, 245, 255, 0.8);
+  font-weight: bold;
+}
+
+.home p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.home .profile-pic {
+  display: none;
+  width: 400px;
+  height: 550px;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  border: 8px solid #E0F7FA;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.home .details {
+  display: none;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Portfolio Section */
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1a1f26; /* Consistent with About card background */
+}
+
+.portfolio .content {
+  max-width: 100%;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #D3D3D3;
+}
+
+.portfolio p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+footer button {
+  padding: 10px 20px;
+  background-color: #00D1FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #008C99;
+}
+
+/* Optional: Light Theme for Footer */
+body.light-theme footer {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.light-theme footer button {
+  background-color: #007BFF;
+  color: #fff;
+}

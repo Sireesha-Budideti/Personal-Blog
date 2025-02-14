@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <link rel="stylesheet" href="Contact.css">
+    <script defer src="Contact.js"></script>
+</head>
+
+<body>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="button" onclick="submitForm()">Send Message</button>
+            <p id="form-message">We will get back to you as soon as possible!</p>
+        </div>
+
+        <!-- Contact Information (e.g., Social media, address) -->
+        <div class="contact-info">
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 234 567 890</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>contact@example.com</p>
+            </div>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>123 Street, City, Country</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

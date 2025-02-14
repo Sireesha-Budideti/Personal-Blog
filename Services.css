@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0d1117;
+    color: #e4e4e4;
+}
+
+/* Apply styles only within the services section */
+#services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#services-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00bcd4;
+    font-size: 2.5rem;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Service Card */
+.service-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #1a1f26;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1) rotate(1deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Title Section */
+.service-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem;
+    color: #00bcd4;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover .service-title {
+    opacity: 0;
+}
+
+/* Diagonal Sliding Panel */
+.sliding-panel {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #00bcd4;
+    color: #0d1117;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    transform: rotate(-10deg);
+    transition: transform 0.6s ease-in-out, top 0.6s ease-in-out, left 0.6s ease-in-out;
+    overflow-y: auto;
+}
+
+.sliding-panel h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.sliding-panel p, .sliding-panel ul {
+    margin-top: 10px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.sliding-panel ul {
+    animation-delay: 0.4s;
+}
+
+.service-card:hover .sliding-panel {
+    top: 0;
+    left: 0;
+    transform: rotate(0);
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.sliding-panel::-webkit-scrollbar {
+    width: 0px;
+}
+
+.sliding-panel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.heading {
+    text-align: center;
+  }
