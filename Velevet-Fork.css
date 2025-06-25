@@ -7,6 +7,47 @@ body {
   color: #fff;
 }
 
+  /* Default: hide menu */
+#nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  min-width: 180px;
+}
+
+/* Show menu when active */
+#nav-menu.active {
+  display: flex;
+}
+
+/* Show hamburger only on small screens */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f4b400;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  header nav {
+    display: none; /* Hide nav in header since it appears in dropdown */
+  }
+}
+
+
+
 /* Header */
 header {
   display: flex;
